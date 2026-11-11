@@ -11,7 +11,7 @@ teacher that turns real builds into programming, AI and cybersecurity lessons.
 
 It is how I practice **programming with AI**: not one chat that does
 everything, but agents with narrow responsibilities, explicit hand-offs and a
-security gate nothing can skip.
+mandatory security gate built into every agent's rules.
 
 ## Why
 
@@ -44,11 +44,12 @@ and tasks — always asks before sending or deleting anything).
 
 ## Ground rules every agent follows
 
-- **Grounding / no hallucination** — every fact cites a real source; unknowns
-  are marked "to be confirmed", never guessed.
+- **Grounding / no hallucination** — agents are instructed to cite a real
+  source for every fact; unknowns are marked "to be confirmed", never guessed.
 - **Evidence before verdict** — findings cite `file:line` or the actual command
   output.
-- **Secrets never in chat or code** — referenced by location, never by value.
+- **Secrets by location, never by value** — and in my workspace a pre-write
+  hook blocks known secret patterns from being saved to files.
 - **Three strikes** — if the same approach fails three times, change strategy.
 - **"Does this already exist?"** — extend before creating; no duplicates.
 - **AI transparency** — every bot identifies itself as an AI.
